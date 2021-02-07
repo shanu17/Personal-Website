@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html style="scroll-behavior: smooth;">
+<head>
+	<meta charset="utf-8">
+	<title>Sudheendra's Personal Website</title>
+	<meta http-equiv="X-UA-Compatible" content="Ie-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="shortcut icon" href="images/icon.jfif"/>
+	<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+<body style="margin: 0px; padding: 0px;">
+	<section id="main">
+		<!--Navigation---------------->
+		<nav>
+			<a href="#" class="logo">SK</a>
+			<div class="toggle"></div>
+			<ul class="menu">
+				<li><a href="#main" class="active">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#contact-form">Contact</a></li>
+				<li><a href="gallery.html">Photos</a></li>
+			</ul>
+			<a href="#" class="lang">EN</a>
+		</nav>
+		<div class="name">
+			<p>Hello</p>
+			<h1>I'm <font color="#17d1ac">Sudheendra</font> Kusume</h1>
+			<p class="details">I'm currently a graduate student at the University of Pittsburgh, on the road to completing my Masters in Computer Network Systems and Telecommunications with an emphasis on Security.</p>
+			<a href="#" class="cv-btn">Download Resume</a>
+		</div>
+		<div class="social">
+			<a href="https://www.facebook.com/shanu.cricket/"><i class="fab fa-facebook"></i></a>
+			<a href="https://www.github.com/shanu17"><i class="fab fa-github"></i></a>
+			<a href="https://www.linkedin.com/in/sudheendra-kusume"><i class="fab fa-linkedin"></i></a>
+		</div>
+		<div class="arrow"></div>
+	</section>
+	<!--ABOUT---------------------------->
+	<section id="about">
+		<div class="about-text">
+			<h1>About Me</h1>
+			<h2>Systems Developer</h2>
+			<p>I am currently working part-time for the University of Pittsburgh as a systems developer. My work usually entails creating plugins for Drupal in PhP, maintaining ULS servers and applying security updates to ULS websites.</p>
+			<button>More details</button>
+		</div>
+		<div class="about-model">
+			<picture>
+				<source media="(max-width: 1000px)" srcset="images/7.jpeg" />
+				<source media="(max-width: 600px)" srcset="images/3.jpeg"/>
+				<img src="images/shanu.jpeg" width=50% style="float: right;" alt="profile image">
+			</picture>
+		</div>
+	</section>
+	<section id="portfolio">		
+		<h1 class="p-heading">Portfolio</h1>
+		<div class="p-b-container">
+			<div class="p-box">
+				<div class="text-overlay">
+					<h1>Cryptography</h1>
+				</div>
+				<img src="images/crypto.png" alt="portfolio Cryptography">
+			</div>
+			<div class="p-box">
+				<div class="text-overlay">
+					<h1>Computer Networks</h1>
+				</div>
+				<img src="images/networks.jpg" alt="portfolio Networks">
+			</div>
+			<div class="p-box">
+				<div class="text-overlay">
+					<h1>Cyber-Security</h1>
+				</div>
+				<img src="images/security.jpg" alt="portfolio Security">
+			</div>
+			<div class="p-box">
+				<div class="text-overlay">
+					<h1>Video Processing</h1>
+				</div>
+				<img src="images/vid_process.jpg" alt="portfolio Video Processing">
+			</div>
+			<div class="p-box">
+				<div class="text-overlay">
+					<h1>Web Technology</h1>
+				</div>
+				<img src="images/web_tech.jpg" alt="portfolio Web Technology">
+			</div>
+			<div class="p-box">
+				<div class="text-overlay">
+					<h1>Big Data</h1>
+				</div>
+				<img src="images/big_data.jpg" alt="portfolio Big Data">
+			</div>
+		</div>
+	</section>
+	<section id="contact-btn">
+		<h1>If You Have Any Comments?</h1>
+		<a href="#contact-form">Contact Me</a>
+	</section>
+	<section id="contact-form">
+		<form id="comments">
+			<div class="contact-left">
+				<h1 class="c-l-heading"><font style="border-bottom: 3px solid #1ED98B;">Commen</font>t Here</h1>
+				<div class="f-name">
+					<label for="fname"><font>Name</font></label>
+					<input id="fname" type="text" placeholder="Full Name" required>
+				</div>
+				<div class="f-email">
+					<label for="femail"><font>Email</font></label>
+					<input id="femail" type="email" placeholder="example@hmail.com" required>
+				</div>
+			</div>
+			<div class="contact-right">
+				<div class="message">
+					<label for="message"><font>Message</font></label>
+					<textarea id="message" name="message" rows="5" cols="20" placeholder="Write Message ..." required></textarea>
+				</div>
+				<button type="submit" form="comments" id="submit-btn">Submit</button>
+			</div>
+		</form>
+	</section>
+	<section id="prevComments">
+		<div id="allComments"></div>
+	</section>
+	<script type="text/javascript" src="js/Jquery.js"></script>
+	<script type="text/javascript" src="js/comments.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.toggle').click(function(){
+				$('.toggle').toggleClass('active')
+				$('nav ul').toggleClass('active-menu')
+			})
+		})
+	</script>
+</body>
+</html>
